@@ -96,6 +96,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  compass
+  haml
   middleman
   middleman-livereload
   ruby18_source_location

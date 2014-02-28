@@ -3,7 +3,8 @@
 source 'http://rubygems.org'
 
 gem "middleman"
-
+gem "haml"
+gem "compass"
 # Live-reloading plugin
 gem "middleman-livereload"
 
