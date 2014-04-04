@@ -36,8 +36,8 @@ use Rack::TryStatic,
 run lambda{ |env|
   not_found_page = File.expand_path("/404.html", __FILE__)
   if File.exist?(not_found_page)
-    [ 404, { 'Content-Type'  => 'text/html'}, [File.read(not_found_page)] ]
+    [ 404, { 'Content-Type'  => 'text/html'}, [File.open("/404.html", File::RDONLY)] ]
   else
-    [ 404, { 'Content-Type'  => 'text/html' }, ['404 - page not found'] ]
+    [ 404, { 'Content-Type'  => 'text/html' }, [File.open("/404.html", File::RDONLY)] ]
   end
 }
