@@ -74,6 +74,9 @@ end
 #   end
 # end
 
+activate :directory_indexes
+set :build_dir, "tmp"
+
 # Add bower's directory to sprockets asset path
 after_configuration do
   @bower_config = JSON.parse(IO.read("#{root}/.bowerrc"))
