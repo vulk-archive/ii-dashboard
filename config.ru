@@ -9,6 +9,12 @@ require "rack/contrib/try_static"
 
 # Enable proper HEAD responses
 use Rack::Head
+
+# Enable Authentication
+use Rack::Auth::Basic, "Protected Area" do |username, password|
+  username == 'user' && password == 'pass'
+end
+
 # Attempt to serve static HTML files
 use Rack::TryStatic,
     :root => "tmp",
@@ -23,6 +29,6 @@ run lambda { |env|
       "Content-Type"  => "text/html",
       "Cache-Control" => "public, max-age=60"
     },
-    File.open("tmp/404/index.html", File::RDONLY)
+    File.open("tmp/404.html", File::RDONLY)
   ]
 }
