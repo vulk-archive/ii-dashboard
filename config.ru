@@ -22,22 +22,23 @@ use Rack::TryStatic,
     :try => ['.html', 'index.html', '/index.html']
 
 # Serve a 404 page if all else fails
-# run lambda { |env|
-#   [
-#     404,
-#     {
-#       "Content-Type"  => "text/html",
-#       "Cache-Control" => "public, max-age=60"
-#     },
-#     File.open("tmp/404.html", File::RDONLY)
-#   ]
-# }
-# Run your own Rack app here or use this one to serve 404 messages:
-run lambda{ |env|
-  not_found_page = File.expand_path("/404.html", __FILE__)
-  if File.exist?(not_found_page)
-    [ 404, { 'Content-Type'  => 'text/html'}, [File.open("/404.html", File::RDONLY)] ]
-  else
-    [ 404, { 'Content-Type'  => 'text/html' }, [File.open("/404.html", File::RDONLY)] ]
-  end
+run lambda { |env|
+  [
+    404,
+    {
+      "Content-Type"  => "text/html",
+      "Cache-Control" => "public, max-age=60"
+    },
+    # File.open("tmp/404.html", File::RDONLY)
+    File.open("/404.html", File::RDONLY)
+  ]
 }
+# Run your own Rack app here or use this one to serve 404 messages:
+# run lambda{ |env|
+#   not_found_page = File.expand_path("/404.html", __FILE__)
+#   if File.exist?(not_found_page)
+#     [ 404, { 'Content-Type'  => 'text/html'}, [File.open("/404.html", File::RDONLY)] ]
+#   else
+#     [ 404, { 'Content-Type'  => 'text/html' }, [File.open("/404.html", File::RDONLY)] ]
+#   end
+# }
