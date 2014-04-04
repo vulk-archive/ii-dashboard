@@ -30,7 +30,7 @@ run lambda { |env|
       "Cache-Control" => "public, max-age=60"
     },
     # File.open("tmp/404.html", File::RDONLY)
-    File.open("/404.html", File::RDONLY)
+    File.open("tmp/404.html", File::RDONLY)
   ]
 }
 # Run your own Rack app here or use this one to serve 404 messages:
