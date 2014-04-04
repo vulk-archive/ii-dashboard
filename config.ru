@@ -7,13 +7,13 @@ require "rack/contrib/try_static"
 # Build the static site when the app boots
 `bundle exec middleman build`
 
-# Enable proper HEAD responses
-use Rack::Head
-
 # Enable Authentication
 use Rack::Auth::Basic, "Protected Area" do |username, password|
   username == 'user' && password == 'pass'
 end
+
+# Enable proper HEAD responses
+use Rack::Head
 
 # Attempt to serve static HTML files
 use Rack::TryStatic,
