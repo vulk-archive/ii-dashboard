@@ -1,0 +1,39 @@
+div[data-magellan-expedition] {
+
+  dl.sub-nav {
+    @include border-radius($global-radius);
+    border: 1px solid $ccgrey;
+    height: $topbar-height;
+    padding-top: 0;
+
+    dd {
+      a {
+        @include border-radius(0);
+        line-height: 4em;
+        height: $topbar-height;
+        display: block;
+      }
+      &.active { }
+    }
+
+  }
+
+  &.fixed {
+    @include shadow;
+    padding:0;
+
+    dl.sub-nav {
+      margin-top: -5px !important;
+      height: $topbar-height;
+      dd {
+        a {
+          @include border-radius(0);
+          line-height: 4em;
+          height: $topbar-height;
+          display: block;
+        }
+        &.active { }
+      }
+    }
+  }
+}

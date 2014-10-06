@@ -1,0 +1,61 @@
+%h1#topbar{'data-magellan-destination'=>'topbar'} Topbar
+
+%nav.top-bar{"data-topbar" => "", :role => "navigation"}
+  %ul.title-area
+    %li.name
+      %h1
+        %a{:href => "#"} My Site
+    / Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone
+    %li.toggle-topbar.menu-icon
+      %a{:href => "#"}
+        %span Menu
+  %section.top-bar-section
+    / Right Nav Section
+    %ul.right
+      %li
+        %a{:href => "#"} About
+      %li
+        %a{:href => "#"} Inventory
+      %li.active
+        %a{:href => "#"} FAQ
+      %li
+        %a{:href => "#"} Contact
+      %li.has-dropdown
+        %a{:href => "#"} Dropdown
+        %ul.dropdown
+          %li
+            %a{:href => "#"} Option 1
+          %li.divider
+          %li
+            %a{:href => "#"} Option 2
+          %li.divider
+          %li
+            %a{:href => "#"} Option 3
+          %li.divider
+          %li.has-dropdown
+            %a{:href => "#"} More Options
+            %ul.dropdown
+              %li
+                %a{:href => "#"} More Options 1
+              %li.divider
+              %li
+                %a{:href => "#"} More Options 2
+              %li.divider
+              %li
+                %a{:href => "#"} More Options 3
+              %li.divider
+      %li.has-dropdown
+        %a{:href => "#"} Dropdown Search
+        %ul.dropdown
+          %li.has-form
+            .field
+              %input{:placeholder => "Search", :type => "text"}
+          %li
+            %a{:href => "#"} Result A
+          %li.divider
+          %li
+            %a{:href => "#"} Result AB
+    %ul.left
+      %li.has-form
+        .field
+          %input{:placeholder => "Search", :type => "text"}

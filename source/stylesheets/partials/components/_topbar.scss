@@ -1,0 +1,83 @@
+nav.top-bar {
+  @include shadow;
+
+  ul.left,
+  ul.right {
+    & > li {
+      background: white;
+      height: $topbar-height;
+
+      &:hover:not(.has-form) a { background:$light; color: $black}
+
+      &.has-dropdown {
+        ul.dropdown {
+          background: $black;
+          li {
+            a { line-height: 45px; }
+            &:not(.has-form) a { background:$black; color: white}
+            &:hover:not(.has-form) a { background:darken($black, 5%); color: white}
+
+            &.divider {border-color: darken($black, 5%);}
+
+            &.has-form {
+              background: $black;
+              padding: 0;
+
+              .field {
+                position: relative;
+
+                &:before {
+                  @include icon();
+                  content: "🔍";
+                  z-index: 9;
+                  color: $ccgrey;
+                  position: absolute;
+                  font-size: 1rem;
+                  top: 10px;
+                  left: 7px;
+                }
+
+                input[type='text'] {
+                  @include box-shadow(none);
+                  top:0;
+                  border:none;
+                  text-indent: 20px;
+                  height: 45px;
+                  color: white;
+                  background: darken($black, 5%);
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &.has-form {
+        padding:0;
+        margin: 0;
+        .field {
+          position: relative;
+
+          &:before {
+            @include icon();
+            content: "🔍";
+            z-index: 9;
+            color: $ccgrey;
+            position: absolute;
+            font-size: 1rem;
+            top: 20px;
+            left: 7px;
+          }
+
+          input[type='text'] {
+            top:0;
+            border:none;
+            text-indent: 20px;
+            height: $topbar-height;
+            @include box-shadow(none);
+          }
+        }
+      }
+    }
+  }
+}

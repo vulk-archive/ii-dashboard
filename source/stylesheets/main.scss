@@ -1,5 +1,10 @@
 @import 'compass';
-@import 'partials/mixins_vars';
-@import 'partials/foundation_settings';
-@import 'foundation-icons';
+@import 'partials/colors';
+@import 'partials/mixins';
+@import 'partials/variables';
+@import 'partials/typography';
+
+@import 'entypo/font/entypo';
+@import 'partials/components/*';
 @import 'foundation.scss';
+

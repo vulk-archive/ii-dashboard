@@ -1,0 +1,25 @@
+@import url(http://fonts.googleapis.com/css?family=Titillium+Web:300,600);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,300);
+
+/* Definition */
+dl {
+  dt {color: $primary-color}
+}
+
+/* List */
+ul.plain { @extend .no-bullet; }
+ul.inline-list {
+  li {
+    margin-right: 30px;
+    &:last-child { margin-right:0; }
+  }
+}
+ul.inline { @extend .inline-list; }
+
+
+/* Blockquote */
+blockquote {
+  background: $primary-color;
+
+  cite {text-align: right;}
+}

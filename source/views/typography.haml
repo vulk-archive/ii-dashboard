@@ -1,1 +1,177 @@
-%h1 Typography
+%h1#typography{'data-magellan-destination'=>'typography'} Typography
+
+.row
+  .large-6.columns
+    %h1 h1. This is a very large header.
+    %h2 h2. This is a large header.
+    %h3 h3. This is a medium header.
+    %h4 h4. This is a moderate header.
+    %h5 h5. This is a small header.
+    %h6 h6. This is a tiny header.
+  .large-6.columns
+    %h1.subheader h1.subheader
+    %h2.subheader h2.subheader
+    %h3.subheader h3.subheader
+    %h4.subheader h4.subheader
+    %h5.subheader h5.subheader
+    %h6.subheader h6.subheader
+.row
+  .large-6.columns
+    %h1
+      h1.
+      %small Small segment header.
+    %h2
+      h2.
+      %small Small segment header.
+    %h3
+      h3.
+      %small Small segment header.
+    %h4
+      h4.
+      %small Small segment header.
+    %h5
+      h5.
+      %small Small segment header.
+    %h6
+      h6.
+      %small Small segment header.
+  .large-6.columns
+    %p
+      This is a paragraph. Paragraphs are preset with a font size, line height and spacing to match the overall vertical rhythm. To show what a paragraph looks like this needs a little more content so, did you know that there are storms occurring on Jupiter that are larger than the Earth? Pretty cool. Wrap strong around type to
+      = succeed "." do
+        %strong make it bold!
+      = succeed "." do
+        %em italicize your words
+    %p
+      Links are very standard, and the
+      %a{:href => "http://www.youtube.com/watch?v=zT2aVoUkSDg"} color is preset
+      to the Foundation primary color.
+
+.row
+  .large-6.columns
+    %h2 Disc
+    %ul.disc
+      %li List item with a much longer description or more content.
+      %li List item
+      %li
+        List item
+        %ul
+          %li Nested list item
+          %li Nested list item
+          %li Nested list item
+      %li List item
+      %li List item
+      %li List item
+
+    %h2 Circle
+    %ul.circle
+      %li List item with a much longer description or more content.
+      %li List item
+      %li
+        List item
+        %ul
+          %li Nested List Item
+          %li Nested List Item
+          %li Nested List Item
+      %li List item
+      %li List item
+      %li List item
+  .large-6.columns
+    %h2 Square
+    %ul.square
+      %li List item with a much longer description or more content.
+      %li List item
+      %li
+        List item
+        %ul
+          %li Nested List Item
+          %li Nested List Item
+          %li Nested List Item
+      %li List item
+      %li List item
+      %li List item
+
+    %h2 Plain
+    %ul.no-bullet
+      %li List item with a much longer description or more content.
+      %li List item
+      %li
+        List item
+        %ul
+          %li Nested List Item
+          %li Nested List Item
+          %li Nested List Item
+      %li List item
+      %li List item
+      %li List item
+.row
+  .large-6.columns
+    %h2 Ordered
+    %ol
+      %li List item with a much longer description or more content.
+      %li List item
+      %li
+        List item
+        %ol
+          %li Nested List Item
+          %li Nested List Item
+          %li Nested List Item
+      %li List item
+      %li List item
+      %li List item
+  .large-6.columns
+    %dl
+      %dt Definition Title
+      %dd Definition Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam id dolor id nibh ultricies vehicula ut id elit.
+
+.row
+  .large-6.columns
+    %h2 Inline
+    %ul.inline
+      %li List item
+      %li List item
+      %li List item
+      %li List item
+      %li List item
+  .large-6.columns
+    %h2 Labels
+    %ul.inline
+      %li
+        %span.label Label
+      %li
+        %span.label.secondary.radius Secondary
+      %li
+        %span.label.alert.round 100+
+      %li
+        %span.label.warning.radius Warning
+      %li
+        %span.label.success Success
+      %li
+        %span.label.info Info
+.row
+  .large-6.columns
+    %h2 Blockquote
+    %blockquote
+      Those people who think they know everything are a great annoyance to those of us who do.
+      %cite Isaac Asimov
+  .large-6.columns
+    %h2 VCard
+    %ul.vcard
+      %li.fn Gaius Baltar
+      %li.street-address 123 Colonial Ave.
+      %li.locality Caprica City
+      %li
+        %span.state> Caprica
+        ,
+        %span.zip 12345
+      %li.email
+        %a{:href => "#"} g.baltar@example.com
+
+.row
+  .large-12.columns
+    %h2 Keystroke
+    %p
+      For example, to close your browser hit
+      %kbd Cmd
+      +
+      %kbd Q

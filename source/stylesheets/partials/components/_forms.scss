@@ -1,0 +1,38 @@
+.range-slider {
+  @extend .radius;
+
+  .range-slider-handle {
+    @include shadow;
+    &:before {
+      @include icon;
+      @include rotate(90deg);
+      content: "\e74f";
+      font-size: 1rem;
+      color: $ccgrey;
+      margin: 0;
+      position: relative;
+      font-size: 0.8em;
+      top: 1px;
+      left: 8px;
+    }
+  }
+
+  &.vertical-range {
+    .range-slider-handle {
+      margin-left: -0.36875rem !important;
+      &:before {
+        @include icon;
+        @include rotate(180deg);
+        content: "\e74f";
+        font-size: 1rem;
+        color: $ccgrey;
+        margin: 0;
+        position: relative;
+        font-size: 0.8em;
+        top: 1px;
+        left: 8px;
+      }
+    }
+  }
+}
+

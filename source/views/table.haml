@@ -1,0 +1,126 @@
+%h1#table{'data-magellan-destination'=>'table'} Table
+
+%h2 Pricing tables (blocks)
+.row
+  .large-4.columns
+    %ul.pricing-table
+      %li.title Start up
+      %li.price $9.99
+      %li.description An awesome description
+      %li.bullet-item 1 Database
+      %li.bullet-item 5GB Storage
+      %li.bullet-item 20 Users
+      %li.cta-button
+        %a.button.success{:href => "#"} Buy Now
+  .large-4.columns
+    %ul.pricing-table
+      %li.title Enterprise
+      %li.price $99.99
+      %li.description An awesome description
+      %li.bullet-item 1 Database
+      %li.bullet-item 5GB Storage
+      %li.bullet-item 20 Users
+      %li.cta-button
+        %a.button.success{:href => "#"} Buy Now
+  .large-4.columns
+    %ul.pricing-table
+      %li.title Small Business
+      %li.price $39.99
+      %li.description An awesome description
+      %li.bullet-item 1 Database
+      %li.bullet-item 5GB Storage
+      %li.bullet-item 20 Users
+      %li.cta-button
+        %a.button.success{:href => "#"} Buy Now
+
+%h2 Pricing tables (cluster)
+.row.collapse.pricing-table-cluster
+  .large-3.columns
+    %ul.pricing-table
+      %li.title Subpar
+      %li.price $9.99
+      %li.description An awesome description
+      %li.bullet-item 1 Database
+      %li.bullet-item 5GB Storage
+      %li.bullet-item 20 Users
+      %li.cta-button
+        %a.button.secondary.small{:href => "#"} Buy Now
+  .large-3.columns
+    %ul.pricing-table.primary
+      %li.title Primary
+      %li.price $99.99
+      %li.description An awesome description
+      %li.bullet-item 1 Database
+      %li.bullet-item 5GB Storage
+      %li.bullet-item 20 Users
+      %li.cta-button
+        %a.button.success{:href => "#"} Buy Now
+  .large-3.columns
+    %ul.pricing-table.secondary
+      %li.title Secondary
+      %li.price $79.99
+      %li.description An awesome description
+      %li.bullet-item 1 Database
+      %li.bullet-item 5GB Storage
+      %li.bullet-item 20 Users
+      %li.cta-button
+        %a.button.success{:href => "#"} Buy Now
+  .large-3.columns
+    %ul.pricing-table
+      %li.title Basic
+      %li.price $29.99
+      %li.description An awesome description
+      %li.bullet-item 1 Database
+      %li.bullet-item 5GB Storage
+      %li.bullet-item 20 Users
+      %li.cta-button
+        %a.button.secondary.small{:href => "#"} Buy Now
+
+%h2 Data tables
+%table
+  %thead
+    %tr
+      %th{:width => "200"} Table Header
+      %th Table Header
+      %th{:width => "150"} Table Header
+      %th{:width => "150"} Table Header
+  %tbody
+    %tr
+      %td Content Goes Here
+      %td This is longer content Donec id elit non mi porta gravida at eget metus.
+      %td Content Goes Here
+      %td Content Goes Here
+    %tr
+      %td Content Goes Here
+      %td This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.
+      %td Content Goes Here
+      %td Content Goes Here
+    %tr
+      %td Content Goes Here
+      %td This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.
+      %td Content Goes Here
+      %td Content Goes Here
+  %tfoot
+    %tr
+      %td{colspan:'4'}
+        %ul.pagination
+          %li.arrow.unavailable
+            %a{:href => ""}
+              %i.icon-left-open-big
+          %li.current
+            %a{:href => ""} 1
+          %li
+            %a{:href => ""} 2
+          %li
+            %a{:href => ""} 3
+          %li
+            %a{:href => ""} 4
+          %li.unavailable
+            %a{:href => ""} …
+          %li
+            %a{:href => ""} 12
+          %li
+            %a{:href => ""} 13
+          %li.arrow
+            %a{:href => ""}
+              %i.icon-right-open-big

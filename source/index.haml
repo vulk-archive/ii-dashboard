@@ -1,10 +1,40 @@
 ---
 title: Middleman Bootstrap Project by Andre Ortiz
 ---
+#top{'data-magellan-destination'=>'top'}
 
-%ul
-  -['buttons', 'forms', 'typography'].each do |view|
-    %li
-      %a{href:'#', onclick:'main.display(this)', data:{view:view}}
-        =view
-#page
+.off-canvas-wrap{"data-offcanvas" => ""}
+  .inner-wrap
+    %nav.tab-bar
+      %section.left-small
+        %a.left-off-canvas-toggle.menu-icon{:href => "#"}
+          %span
+      %section.middle.tab-bar-section
+        %h1.title Foundation
+      %section.right-small
+        %a.right-off-canvas-toggle.menu-icon{:href => "#"}
+          %span
+    %aside.left-off-canvas-menu
+      %ul.off-canvas-list
+        %li
+          %label Foundation
+        %li
+          %a{:href => "#"} The Psychohistorians
+        %li
+          %a{:href => "#"} ...
+    %aside.right-off-canvas-menu
+      %ul.off-canvas-list
+        %li
+          %label Users
+        %li
+          %a{:href => "#"} Hari Seldon
+        %li
+          %a{:href => "#"} ...
+    %section.main-section
+      .row
+        .large-12.columns
+          -sections.each do |section|
+            =partial "views/#{section}"
+            %hr
+
+    %a.exit-off-canvas

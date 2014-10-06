@@ -1,1 +1,109 @@
-%h1 Buttons
+%h1#buttons{'data-magellan-destination'=>'buttons'} Buttons
+/ Size Classes
+
+%h2 Basic Buttons
+%ul.large-block-grid-3
+  %li
+    %a.button.tiny{:href => "#"} Tiny Button
+  %li
+    %a.button.small{:href => "#"} Small Button
+  %li
+    %a.button.success{:href => "#"} Success Button
+  %li
+    %a.button.secondary{:href => "#"} Secondary Button
+  %li
+    %a.button.alert{:href => "#"} Alert Button
+  %li
+    %a.button.disabled{:href => "#"} Disabled Button
+
+%h2 Icon &amp; Text Buttons
+%ul.large-block-grid-3
+  %li
+    %a.button.tiny{:href => "#"}
+      %i.icon-home
+      Tiny Button
+  %li
+    %a.button.small{:href => "#"}
+      %i.icon-home
+      Small Button
+  %li
+    %a.button.success{:href => "#"}
+      %i.icon-check
+      Success Button
+  %li
+    %a.button.secondary{:href => "#"}
+      %i.icon-tools
+      Secondary Button
+  %li
+    %a.button.alert{:href => "#"}
+      %i.icon-cancel
+      Alert Button
+  %li
+    %a.button.disabled{:href => "#"}
+      %i.icon-home
+      Disabled Button
+
+%h2 Icon Buttons
+%ul.large-block-grid-5
+  %li
+    %a.button.small.outline{:href => "#"}
+      %i.icon-home
+  %li
+    %a.button.small.outline.alert{:href => "#"}
+      %i.icon-heart
+  %li
+    %a.button.small.outline.success{:href => "#"}
+      %i.icon-basket
+  %li
+    %a.button.small.outline.secondary{:href => "#"}
+      %i.icon-users
+  %li
+    %a.button.small.outline.disabled{:href => "#"}
+      %i.icon-megaphone
+
+%h2 Button &amp; Icon Bars
+%ul.large-block-grid-2
+  %li
+    %ul.button-group
+      %li
+        %a.button{:href => "#"} Button 1
+      %li
+        %a.button{:href => "#"} Button 2
+      %li
+        %a.button{:href => "#"} Button 3
+  %li
+    %ul.button-group
+      %li
+        %a.button.small.secondary{:href => "#"} Button 1
+      %li
+        %a.button.small.secondary{:href => "#"} Button 2
+      %li
+        %a.button.small.secondary{:href => "#"} Button 3
+  %li
+    %ul.button-group
+      %li
+        %a.button.secondary{:href => "#"} Button 1
+      %li
+        %a.button.secondary{:href => "#"} Button 2
+      %li
+        %a.button.secondary{:href => "#"} Button 3
+      %li
+        %a.button.success{:href => "#"}
+          %i.icon-check
+      %li
+        %a.button.alert{:href => "#"}
+          %i.icon-cancel
+  %li
+    %ul.button-group
+      %li
+        %a.button.secondary{:href => "#"}
+          %i.icon-to-start
+      %li
+        %a.button.secondary{:href => "#"}
+          %i.icon-play
+      %li
+        %a.button.secondary{:href => "#"}
+          %i.icon-to-end
+      %li
+        %a.button.secondary{:href => "#"}
+          %i.icon-record
