@@ -1,8 +1,20 @@
 table {
   @include border-radius($global-radius);
+  border-collapse: collapse;
   tbody {
-    border-bottom: 1px solid $ccgrey !important;
-    border-top: 1px solid $ccgrey !important;
+    border-top: 1px solid $ccgrey;
+    border-bottom: 1px solid $ccgrey;
+  }
+  td {
+    border-top: 1px dotted $ccgrey;
+    border-right: 1px dotted $ccgrey;
+  }
+
+  tfoot {
+    ul.pagination {
+      line-height: 0;
+      margin-bottom: 0;
+    }
   }
 }
 

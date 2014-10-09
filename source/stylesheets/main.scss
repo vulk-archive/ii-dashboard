@@ -8,3 +8,7 @@
 @import 'partials/components/*';
 @import 'foundation.scss';
 
+:focus {
+  outline-color: transparent;
+  outline-style: none;
+}

@@ -9,6 +9,20 @@ nav.top-bar {
 
       &:hover:not(.has-form) a { background:$light; color: $black}
 
+      &.has-button,
+      &.has-action,
+      &.action,
+      &.create-action {
+        a {
+          background: $success-color;
+          color: white;
+          &:hover {
+            color: white;
+            background: darken($success-color, 5%);
+          }
+        }
+      }
+
       &.has-dropdown {
         ul.dropdown {
           background: $black;
