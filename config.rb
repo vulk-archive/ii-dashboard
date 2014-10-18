@@ -87,7 +87,7 @@ end
 
 
 activate :directory_indexes
-set :build_dir, "tmp"
+set :build_dir, "Build"
 
 # Add bower's directory to sprockets asset path
 after_configuration do
@@ -104,7 +104,7 @@ set :images_dir, 'images'
 # Build-specific configuration
 configure :build do
   # For example, change the Compass output style for deployment
-  # activate :minify_css
+  activate :minify_css
 
   # Minify Javascript on build
   # activate :minify_javascript

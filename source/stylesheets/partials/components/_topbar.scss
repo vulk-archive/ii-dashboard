@@ -14,7 +14,7 @@ nav.top-bar {
       &.action,
       &.create-action {
         a {
-          background: $success-color;
+          @include gradient($success-color);
           color: white;
           &:hover {
             color: white;

@@ -3,7 +3,7 @@
 }
 
 @mixin gradient($color) {
-  @include background-image(linear-gradient($color, $color*0.9));
+  @include background-image(linear-gradient($color, darken($color, 8%)));
 }
 
 @mixin icon() {
