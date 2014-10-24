@@ -116,3 +116,33 @@
               %i.icon-right-open-big
       %td{colspan:'2'}
         %span 3 of 12 records
+
+%h2 Data tables with filter field
+%table
+  %thead
+    %tr
+      %th{:width => "200"} Table Header
+      %th Table Header
+      %th{:width => "150"} Table Header
+      %th{:width => "150"} Table Header
+    %tr.filter
+      %td{colspan:'4'}
+        %form
+          .field
+            %input{type:'text', placeholder:'Filter: '}
+  %tbody
+    %tr
+      %td A1
+      %td This is longer content Donec id elit non mi porta gravida at eget metus.
+      %td Content Goes Here
+      %td Content Goes Here
+    %tr
+      %td B1
+      %td This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.
+      %td Content Goes Here
+      %td Content Goes Here
+    %tr
+      %td C1
+      %td This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.
+      %td Content Goes Here
+      %td Content Goes Here

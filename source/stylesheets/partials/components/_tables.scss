@@ -10,6 +10,37 @@ table {
     border-right: 1px dotted $ccgrey;
   }
 
+  tr.filter {
+    td {
+      padding: 0;
+      margin: 0;
+      .field {
+        border-left:10px solid $primary-color;
+
+        position: relative;
+        &:before {
+          @include icon();
+          /*@extend .icon-funel;*/
+          content: "🔍";
+          z-index: 9;
+          color: $ccgrey;
+          position: absolute;
+          font-size: 1rem;
+          top: 15px;
+          left: 7px;
+        }
+        input[type='text'] {
+          border: none;
+          font-weight: normal;
+          text-indent: 20px;
+          padding: 0 0 0 10px;
+          margin: 0 !important;
+        }
+      }
+
+    }
+  }
+
   tfoot {
     ul.pagination {
       line-height: 0;
