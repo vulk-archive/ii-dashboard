@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html class='no-js' lang='en'>
+  <head>
+    <meta charset='utf-8'>
+    <meta content='width=device-width, initial-scale=1.0' name='viewport'>
+    <meta content='Description here' name='description'>
+    <meta content='tacos, whiskey, beer, sunshine, friends' name='keywords'>
+    <link href='images/favicon.png' rel='shortcut icon' type='image/x-icon'>
+    <link href='images/apple-touch-icon-precomposed.png' rel='apple-touch-icon-precomposed'>
+    <link href='images/apple-touch-icon.png' rel='apple-touch-icon'>
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>The Middleman</title>
+    <link href="/stylesheets/main.css" media="screen" rel="stylesheet" type="text/css" />
+    <script src="/javascripts/modernizr.js" type="text/javascript"></script>
+  </head>
+  <body class='bower_components bower_components_entypo bower_components_entypo_DEVELOPMENT bower_components_entypo_DEVELOPMENT_index'>
+    <h1 id="development-docs">Development docs</h1>
+    
+    <p>Set if scripts to easily build webfonts from SVG images</p>
+    
+    <h2 id="installation">Installation</h2>
+    
+    <h3 id="ubuntu">Ubuntu</h3>
+    
+    <p><strong>(!)</strong> Use Ubuntu <strong>12.04</strong>. Or you will have to manually install fresh
+    freetype library, to build ttfautohint.</p>
+    
+    <p>Init font-builder and build additional software (ttf2eot, ttfautohint):</p>
+    
+    <pre><code>make support
+    </code></pre>
+    
+    <p>Install system dependencies (fontforge &amp; python modules):</p>
+    
+    <pre><code>cd support/font-builder &amp;&amp; sudo make dev-deps
+    </code></pre>
+    
+    <p>If you are working on multiple font you would like to have only one instance of
+    heavy dependencies like <em>ttfautohint</em> installed. Run this:</p>
+    
+    <pre><code>cd support/font-builder &amp;&amp; sudo make support-install
+    </code></pre>
+    
+    <p>Note that you don't need to install system dependencies more than once.</p>
+    
+    <h3 id="mac">Mac</h3>
+    
+    <p>TBD. Anyone, please help.</p>
+    
+    <h3 id="windows">Windows</h3>
+    
+    <p>TBD. Anyone, please help.</p>
+    
+    <h2 id="making-font">Making font</h2>
+    
+    <h3 id="steps">Steps</h3>
+    
+    <ol>
+      <li>Place images into <code>/src/svg</code> folder.</li>
+      <li>Add image info to <code>config.yml</code> (see comments in it)</li>
+      <li>Edit css/html templates, if needed.</li>
+      <li>Run <code>make</code></li>
+    </ol>
+    
+    <p>Generated data will be placed in <code>./font</code></p>
+    
+    <p>You can rebuild css/html only with <code>make html</code></p>
+    
+    <h3 id="svg-image-requirements">SVG image requirements</h3>
+    
+    <p>Any image will be proportionnaly scaled, to fit height in ascent-descent
+    It's convenient to make height = 1000px. Default font baseline will be 20% from
+    the bottom.</p>
+    
+    <p>In most cases it's ok to visually allign icons to middle line, not to baseline.
+    If you are not shure, how to start - make image with 10% top/bottom padding.
+    Then generate demo page and tune scale/offset.</p>
+    <script src="/javascripts/all.js" type="text/javascript"></script>
+  </body>
+</html>
