@@ -1,14 +1,2 @@
 @import 'compass';
-@import 'partials/colors';
-@import 'partials/mixins';
-@import 'partials/variables';
-@import 'partials/typography';
-
-@import 'entypo/font/entypo';
-@import 'partials/components/*';
 @import 'foundation.scss';
-
-:focus {
-  outline-color: transparent;
-  outline-style: none;
-}

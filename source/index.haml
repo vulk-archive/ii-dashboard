@@ -1,40 +1,19 @@
 ---
 title: Middleman Bootstrap Project by Andre Ortiz
 ---
-#top{'data-magellan-destination'=>'top'}
 
-.off-canvas-wrap{"data-offcanvas" => ""}
-  .inner-wrap
-    %nav.tab-bar
-      %section.left-small
-        %a.left-off-canvas-toggle.menu-icon{:href => "#"}
-          %span
-      %section.middle.tab-bar-section
-        %h1.title Foundation
-      %section.right-small
-        %a.right-off-canvas-toggle.menu-icon{:href => "#"}
-          %span
-    %aside.left-off-canvas-menu
-      %ul.off-canvas-list
+.row
+  .large-12.columns
+    %h1 Basic Middleman
+    %p.lead This starter app contains the following:
+    %ol
+      -['Middleman', 'Bower', 'Foundation', 'jQuery', 'haml', 'compass'].each do |thing|
         %li
-          %label Foundation
-        %li
-          %a{:href => "#"} The Psychohistorians
-        %li
-          %a{:href => "#"} ...
-    %aside.right-off-canvas-menu
-      %ul.off-canvas-list
-        %li
-          %label Users
-        %li
-          %a{:href => "#"} Hari Seldon
-        %li
-          %a{:href => "#"} ...
-    %section.main-section
-      .row
-        .large-12.columns
-          -sections.each do |section|
-            =partial "views/#{section}"
-            %hr
+          %span.label=thing
 
-    %a.exit-off-canvas
+    %p
+      This app is deployment ready on
+      %kbd Heroku.
+      Check the
+      %kbd Github Repo
+      for variations of this project
