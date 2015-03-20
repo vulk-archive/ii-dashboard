@@ -1,9 +1,0 @@
-%h1#magellan{'data-magellan-destination'=>'magellan'} Magellan
-%div{"data-magellan-expedition" => "fixed"}
-  %dl.sub-nav
-    %dd{"data-magellan-arrival" => 'top'}
-      %a{:href => "#top"}
-        %i.icon-home
-    - sections.each do |section|
-      %dd{"data-magellan-arrival" => section}
-        %a{:href => "##{section}"}=section

@@ -17,7 +17,7 @@ use Rack::Head
 
 # Attempt to serve static HTML files
 use Rack::TryStatic,
-    :root => "tmp",
+    :root => "build",
     :urls => %w[/],
     :try => ['.html', 'index.html', '/index.html']
 
@@ -30,7 +30,7 @@ run lambda { |env|
       "Cache-Control" => "public, max-age=60"
     },
     # File.open("tmp/404.html", File::RDONLY)
-    File.open("tmp/404/index.html", File::RDONLY)
+    File.open("build/404/index.html", File::RDONLY)
   ]
 }
 # Run your own Rack app here or use this one to serve 404 messages:

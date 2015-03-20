@@ -67,27 +67,9 @@ end
 # Reload the browser automatically whenever files change
 # activate :livereload
 
-# Methods defined in the helpers block are available in templates
-helpers do
-  def sections
-    ['magellan',
-      'topbar',
-      'typography',
-      'iconbar',
-      'sidenav',
-      'subnav',
-      'breadcrumbs',
-      'pagination',
-      'buttons',
-      'forms',
-      'table',
-      'tabs']
-  end
-end
-
 
 activate :directory_indexes
-set :build_dir, "Build"
+set :build_dir, "build"
 
 # Add bower's directory to sprockets asset path
 after_configuration do
