@@ -24,3 +24,7 @@ gem 'haml'
 
 # Compass mixins
 gem 'compass'
+
+# For EmberJS and HandleBars
+gem "middleman-ember", github: "nerdyworm/middleman-ember"
+gem 'hamlbars', '~> 2.1.1'

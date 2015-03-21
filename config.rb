@@ -1,7 +1,3 @@
-###
-# Compass
-###
-
 compass_config do |config|
   # Require any additional compass plugins here.
   config.add_import_path "bower_components/foundation/scss"
@@ -67,6 +63,12 @@ end
 # Reload the browser automatically whenever files change
 # activate :livereload
 
+###
+# Ember Templates
+###
+MiddlemanEmber::HandlebarsTemplate.options = {
+  template_path: "app/templates"
+}
 
 activate :directory_indexes
 set :build_dir, "build"

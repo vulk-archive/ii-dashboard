@@ -1,0 +1,6 @@
+.row
+  .large-12.columns
+    %h1 Hello Ember + Middleman!
+    %p
+      Find me in
+      %kbd source/javascripts/app/templates/application.hbs
