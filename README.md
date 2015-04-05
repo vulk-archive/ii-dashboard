@@ -9,8 +9,4 @@
 5. Compass
 6. Deployment ready to Heroku
 
-## Check branches for sets. Currently available: ##
-
-1. Master
-2. Ember
-3. Angular# ii-dashboard
+This is forked from the emberjs branch of https://github.com/andreortiz82/middleman_bootstrap
