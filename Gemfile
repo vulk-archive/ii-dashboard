@@ -17,7 +17,7 @@ gem "tzinfo-data", platforms: [:mswin, :mingw]
 gem "rack-contrib", "~> 1.2"
 
 # Not sure why you're here
-gem "puma", "~> 2.10"
+gem "puma", "~> 4.3"
 
 # I love HAML
 gem 'haml'
